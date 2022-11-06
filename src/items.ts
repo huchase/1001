@@ -1,9 +1,9 @@
 export const infos = [
   {
-    name: 'Start',
+    name: 'Try graph',
   },
   {
-    name: 'Arc',
+    name: 'Try canvas',
   },
 ]
 

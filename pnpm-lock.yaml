@@ -3,11 +3,13 @@ lockfileVersion: 5.4
 specifiers:
   '@antfu/eslint-config': ^0.29.2
   '@iconify-json/carbon': ^1.1.9
+  '@types/d3-hierarchy': 3.1.0
   '@types/node': ^18.11.8
   '@unocss/reset': ^0.46.2
   '@vitejs/plugin-vue': ^3.2.0
   '@vue/test-utils': ^2.2.1
   '@vueuse/core': ^9.4.0
+  d3-hierarchy: 3.1.0
   eslint: ^8.26.0
   jsdom: ^20.0.2
   pnpm: ^7.14.1
@@ -25,12 +27,14 @@ specifiers:
 
 dependencies:
   '@vueuse/core': 9.4.0_vue@3.2.41
+  d3-hierarchy: 3.1.0
   vue: 3.2.41
   vue-router: 4.1.6_vue@3.2.41
 
 devDependencies:
   '@antfu/eslint-config': 0.29.2_wyqvi574yv7oiwfeinomdzmc3m
   '@iconify-json/carbon': 1.1.9
+  '@types/d3-hierarchy': 3.1.0
   '@types/node': 18.11.8
   '@unocss/reset': 0.46.2
   '@vitejs/plugin-vue': 3.2.0_vite@3.2.2+vue@3.2.41
@@ -429,6 +433,10 @@ packages:
 
   /@types/chai/4.3.3:
     resolution: {integrity: sha512-hC7OMnszpxhZPduX+m+nrx+uFoLkWOMiR4oa/AZF3MuSETYTZmFfJAHqZEM8MVlvfG7BEUcgvtwoCTxBp6hm3g==}
+    dev: true
+
+  /@types/d3-hierarchy/3.1.0:
+    resolution: {integrity: sha512-g+sey7qrCa3UbsQlMZZBOHROkFqx7KZKvUpRzI/tAp/8erZWpYq7FgNKvYwebi2LaEiVs1klhUfd3WCThxmmWQ==}
     dev: true
 
   /@types/debug/4.1.7:
@@ -1344,6 +1352,11 @@ packages:
 
   /csstype/2.6.20:
     resolution: {integrity: sha512-/WwNkdXfckNgw6S5R125rrW8ez139lBHWouiBvX8dfMFtcn6V81REDqnH7+CRpRipfYlyU1CmOnOxrmGcFOjeA==}
+
+  /d3-hierarchy/3.1.0:
+    resolution: {integrity: sha512-RZWnhsvcrf81F+khYxu2IOfoSwfCGla9je0JQaRIEuPOgJd+3cKdvAYyMXvTt0MDbluiHThYBQzIb0xxXfnqmA==}
+    engines: {node: '>=12'}
+    dev: false
 
   /data-urls/3.0.2:
     resolution: {integrity: sha512-Jy/tj3ldjZJo63sVAvg6LHt2mHvl4V6AgRAmNDtLdm7faqtsx+aJG42rsyCo9JCoRVKwPFzKlIPx3DIibwSIaQ==}

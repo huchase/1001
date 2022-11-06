@@ -30,8 +30,7 @@ const pointStyles = computed<Record<string, string | number>>(() => ({
 </script>
 
 <template>
-  <div />
-  <nav text-xl mt-6 inline-flex gap-2>
+  <nav text-xl inline-flex gap-2>
     <button icon-btn @click="fn">
       <div i-carbon:menu />
     </button>
