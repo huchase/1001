@@ -23,6 +23,45 @@ export const infos = [
   {
     name: 'Parameter equation',
   },
+  {
+    name: 'Try square',
+  },
+  {
+    name: 'Try earcut.js',
+  },
+  {
+    name: 'Pint & Square',
+  },
+  {
+    name: 'Point & Square II',
+  },
+  {
+    name: 'Fireworks',
+  },
+  {
+    name: 'Color band',
+  },
+  {
+    name: 'Cubehelix',
+  },
+  {
+    name: 'Draft',
+  },
+  {
+    name: 'Draft II',
+  },
+  {
+    name: 'Draft III',
+  },
+  {
+    name: 'Draft IV',
+  },
+  {
+    name: 'Draft V',
+  },
+  {
+    name: 'Draft VI',
+  },
 ]
 
 export const items = infos.map((info, idx) => {

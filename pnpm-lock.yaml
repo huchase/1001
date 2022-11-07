@@ -10,7 +10,9 @@ specifiers:
   '@vue/test-utils': ^2.2.1
   '@vueuse/core': ^9.4.0
   d3-hierarchy: 3.1.0
+  earcut: ^2.2.4
   eslint: ^8.26.0
+  gl-renderer: ^0.14.0
   jsdom: ^20.0.2
   pnpm: ^7.14.1
   roughjs: ^4.5.2
@@ -29,6 +31,8 @@ specifiers:
 dependencies:
   '@vueuse/core': 9.4.0_vue@3.2.41
   d3-hierarchy: 3.1.0
+  earcut: 2.2.4
+  gl-renderer: 0.14.0
   roughjs: 4.5.2
   vue: 3.2.41
   vue-router: 4.1.6_vue@3.2.41
@@ -196,6 +200,13 @@ packages:
     hasBin: true
     dependencies:
       '@babel/types': 7.18.9
+
+  /@babel/runtime/7.20.1:
+    resolution: {integrity: sha512-mrzLkl6U9YLF8qpqI7TB82PESyEGjm/0Ly91jG575eVxMMlb8fYfOXFZIJ8XfLrJZQbm7dlKry2bJmXBUEkdFg==}
+    engines: {node: '>=6.9.0'}
+    dependencies:
+      regenerator-runtime: 0.13.10
+    dev: false
 
   /@babel/types/7.18.9:
     resolution: {integrity: sha512-WwMLAg2MvJmt/rKEVQBBhIVffMmnilX4oe0sRe7iPOHIGsqpruFHHdrfj4O1CMMtgMtCU4oPafZjDPCRgO57Wg==}
@@ -1536,6 +1547,10 @@ packages:
     resolution: {integrity: sha512-jtD6YG370ZCIi/9GTaJKQxWTZD045+4R4hTk/x1UyoqadyJ9x9CgSi1RlVDQF8U2sxLLSnFkCaMihqljHIWgMg==}
     dev: true
 
+  /earcut/2.2.4:
+    resolution: {integrity: sha512-/pjZsA1b4RPHbeWZQn66SWS8nZZWLQQ23oE3Eam7aroEFGEvwKAsJfZ9ytiEMycfzXWpca4FA9QIOehf7PocBQ==}
+    dev: false
+
   /emoji-regex/8.0.0:
     resolution: {integrity: sha512-MSjYzcWNOA0ewAHpz0MxpYFvwg6yjy1NG3xteoqz644VCo/RPgnr1/GGt+ic3iJTzQ8Eu3TdM14SawnVUmGE6A==}
     dev: true
@@ -2444,6 +2459,12 @@ packages:
       call-bind: 1.0.2
       get-intrinsic: 1.1.2
     dev: true
+
+  /gl-renderer/0.14.0:
+    resolution: {integrity: sha512-oZlpsF58f66MRpn1A9SjUOIP1rwrBqXGOyKk9ZIjf5fZs2GDzWpKD3OYwzDoEZBb2uJrQ6MlVY+qxpCzgw7s3Q==}
+    dependencies:
+      '@babel/runtime': 7.20.1
+    dev: false
 
   /glob-parent/5.1.2:
     resolution: {integrity: sha512-AOIgSQCepiJYwP3ARnGx+5VnTu2HBYdzbGP45eLw1vr3zB3vZLeyed1sC9hnbcOc9/SrMyM5RPQrkGz4aS9Zow==}
@@ -3911,6 +3932,10 @@ packages:
     dependencies:
       picomatch: 2.3.1
     dev: true
+
+  /regenerator-runtime/0.13.10:
+    resolution: {integrity: sha512-KepLsg4dU12hryUO7bp/axHAKvwGOCV0sGloQtpagJ12ai+ojVDqkeGSiRX1zlq+kjIMZ1t7gpze+26QqtdGqw==}
+    dev: false
 
   /regexp-tree/0.1.24:
     resolution: {integrity: sha512-s2aEVuLhvnVJW6s/iPgEGK6R+/xngd2jNQ+xy4bXNDKxZKJH6jpPHY6kVeVv1IeLCHgswRj+Kl3ELaDjG6V1iw==}
