@@ -13,7 +13,7 @@ function one() {
 }
 
 async function two() {
-  const data = await (await fetch('/src/data/city.json')).json()
+  const data = await (await fetch('/city.json')).json()
   const regions = hierarchy(data).sum(d => 1).sort((a: any, b: any) => b.value - a.value)
   const apack = pack().size([1600, 1600]).padding(10)
   const root = apack(regions)

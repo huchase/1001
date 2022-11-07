@@ -16,7 +16,8 @@ const boxStyles = computed(() => {
       height: `${bounding.height}px`,
       left: `${bounding.left}px`,
       top: `${bounding.top}px`,
-      backgroundColor: '#3eaf7c44',
+      // backgroundColor: '#3eaf7c44',
+      border: '2px solid #3eaf7c',
       transition: 'all 0.05s linear',
     } as Record<string, string | number>
   }
