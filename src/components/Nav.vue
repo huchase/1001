@@ -1,7 +1,8 @@
 <script setup lang="ts">
 const router_ = useRouter()
 function back() {
-  router_.back()
+  // router_.back()
+  router_.push({ path: '/' })
 }
 </script>
 

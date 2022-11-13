@@ -1,9 +1,10 @@
 <script setup lang="ts">
-import { Vec3 } from '../math/vector3d'
-import { useCtx } from '../math'
+import { initCanvas } from '../utils'
+const el = ref<HTMLCanvasElement | null>(null)
 
 onMounted(() => {
-  const ctx = useCtx()
+  const canvas = el.value!
+  const { ctx } = initCanvas(canvas, 500, 500, true)
 
   // function randomRGB() {
   //   return new Vec3(
@@ -77,7 +78,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <canvas height="1024" width="1024" />
+  <canvas ref="el" />
 </template>
 
 <style scoped>

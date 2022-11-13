@@ -1,5 +1,5 @@
 <script setup lang="ts">
-function one() {
+function fn() {
   const canvas: any = document.querySelector('canvas')
 
   const gl = canvas.getContext('webgl')
@@ -59,17 +59,10 @@ function one() {
 }
 
 onMounted(() => {
-  one()
+  fn()
 })
 </script>
 
 <template>
   <canvas width="512" height="512" />
 </template>
-
-<style scoped>
-canvas {
-  height: 512px;
-  width: 512px;
-}
-</style>

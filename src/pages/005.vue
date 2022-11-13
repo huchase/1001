@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import rough from 'roughjs'
-function one() {
-  const rc = rough.canvas(document.querySelector('canvas'))
-  const ctx = rc.ctx
+function fn() {
+  const rc = rough.canvas(document.querySelector('canvas')!)
+  const ctx: CanvasRenderingContext2D = rc.ctx
   ctx.translate(256, 256)
   ctx.scale(1, -1)
 
@@ -21,18 +21,10 @@ function one() {
 }
 
 onMounted(() => {
-  one()
+  fn()
 })
 </script>
 
 <template>
-  <canvas height="1024" width="1024" />
+  <canvas height="512" width="512" />
 </template>
-
-<style scoped>
-canvas {
-  width: 1024px;
-  height: 1024px;
-  border: 1px solid gray;
-}
-</style>

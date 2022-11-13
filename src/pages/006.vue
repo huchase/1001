@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { Vector2D } from '../math'
-function one() {
+import { Vector2D } from '../cg'
+function fn() {
   const canvas: any = document.querySelector('canvas')
   const ctx = canvas.getContext('2d')
 
@@ -42,17 +42,10 @@ function one() {
   drawBranch(ctx, v0, 100, 10, 1, 3)
 }
 onMounted(() => {
-  one()
+  fn()
 })
 </script>
 
 <template>
-  <canvas width="1000" height="1000" />
+  <canvas width="900" height="900" h-225 w-225 />
 </template>
-
-<style scoped>
-    canvas {
-      width: 1000px;
-      height: 1000px;
-    }
-</style>

@@ -1,5 +1,5 @@
 <template>
-  <div class="box">
+  <div flex gap-30>
     <div class="bargraph">
       <div />
       <div />
@@ -15,7 +15,7 @@
           total: [25, 26, 40, 45, 68],
           current: [15, 11, 17, 25, 37],
         }
-       -->
+      -->
       <svg xmlns="http://www.w3.org/2000/svg" width="120px" height="240px" viewBox="0 0 60 100">
         <g transform="translate(0, 100) scale(1, -1)">
           <g>
@@ -40,12 +40,10 @@
 
 <style scoped>
  .bargraph {
-  border: 1px solid red;
   display: grid;
   width: 150px;
   height: 300px;
   padding: 10px;
-  /* margin: 20px; */
   transform: scaleY(1);
   grid-template-columns: repeat(5, 20%);
 }
@@ -88,9 +86,5 @@
   height: 100px;
   border-radius: 50%;
   background-image: conic-gradient(#000, 180deg, #ff0 180deg, #ff0 270deg, #f0f 270deg, #ff00ff 360deg);
-}
-
-.box {
-  display: flex;
 }
 </style>

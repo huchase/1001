@@ -1,6 +1,6 @@
 import { Vector2D } from './vector2d'
+import { TAU } from './constant'
 const TAU_SEGMENTS = 60
-const TAU = Math.PI * 2
 const LINE_SEGMENTS = 60
 
 export function regularShape(edges = 3, step: number, x: number, y: number): Vector2D[] {

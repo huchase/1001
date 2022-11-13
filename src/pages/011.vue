@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { draw } from '../math'
+import { drawPoints as draw } from '../cg'
 onMounted(() => {
   const vertices = [
     [-0.7, 0.5],
@@ -27,17 +27,17 @@ onMounted(() => {
     cloned.translate(0.5 * width, 0.5 * height)
     cloned.scale(1, -1)
     let ret: any = false
-    draw(poitions, cloned, 'transparent', 'red')
+    draw(poitions, cloned, { strokeStyle: 'transparent' }, 'red')
     ret |= cloned.isPointInPath(x, y)
     if (!ret) {
-      draw([[100, 100], [100, 200], [150, 200]], cloned, 'transparent', 'blue')
+      draw([[100, 100], [100, 200], [150, 200]], cloned, { strokeStyle: 'transparent' }, 'blue')
       ret |= cloned.isPointInPath(x, y)
     }
     return ret
   }
   // debugger
-  draw(poitions, ctx, 'transparent', 'red')
-  draw([[100, 100], [100, 200], [150, 200]], ctx, 'transparent', 'blue')
+  draw(poitions, ctx, { strokeStyle: 'transparent' }, 'red')
+  draw([[100, 100], [100, 200], [150, 200]], ctx, { strokeStyle: 'transparent' }, 'blue')
 
   const { left, top } = canvas.getBoundingClientRect()
 
@@ -50,12 +50,12 @@ onMounted(() => {
     ctx.clearRect(-256, -256, 512, 512)
 
     if (isPointInPath(ctx, offsetX, offsetY)) {
-      draw(poitions, ctx, 'transparent', 'green')
-      draw([[100, 100], [100, 200], [150, 200]], ctx, 'transparent', 'orange')
+      draw(poitions, ctx, { strokeStyle: 'transparent' }, 'green')
+      draw([[100, 100], [100, 200], [150, 200]], ctx, { strokeStyle: 'transparent' }, 'orange')
     }
     else {
-      draw(poitions, ctx, 'transparent', 'red')
-      draw([[100, 100], [100, 200], [150, 200]], ctx, 'transparent', 'blue')
+      draw(poitions, ctx, { strokeStyle: 'transparent' }, 'red')
+      draw([[100, 100], [100, 200], [150, 200]], ctx, { strokeStyle: 'transparent' }, 'blue')
     }
   })
 })

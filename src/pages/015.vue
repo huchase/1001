@@ -1,19 +1,14 @@
 <script setup lang="ts">
-import { cubehelix } from '../math/cubehelix'
-import { useCtx } from '../math'
-
+import { initCanvas } from '../utils'
+import { cubehelix } from '../cg/cubehelix'
+const el = ref<HTMLCanvasElement | null>(null)
 onMounted(() => {
-  // const canvas = document.querySelector('canvas')
-  // const ctx = canvas.getContext('2d')
-
-  // ctx.translate(0, 256)
-  // ctx.scale(1, -1)
-  const ctx = useCtx()
+  const { ctx } = initCanvas(el.value!, 1024, 1024, true)
 
   const color = cubehelix()
   const T = 2000
 
-  function update(t) {
+  function update(t: any) {
     const p = 0.5 + 0.5 * Math.sin(t / T)
     ctx.clearRect(0, -256, 512, 512)
     const { r, g, b } = color(p)
@@ -24,13 +19,12 @@ onMounted(() => {
     window.ctx = ctx
     requestAnimationFrame(update)
   }
-
   update(0)
 })
 </script>
 
 <template>
-  <canvas height="1024" width="1024" />
+  <canvas ref="el" />
 </template>
 
 <style scoped>

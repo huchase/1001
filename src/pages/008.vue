@@ -1,7 +1,10 @@
 <script setup lang="ts">
-import { Vector2D, pCubicBezier, pHelical, pParabola, pQuadricBezier, pStar, useCtx } from '../math'
+import { initCanvas } from '../utils'
+import { Vector2D } from '../cg'
+import { pCubicBezier, pHelical, pParabola, pQuadricBezier, pStar } from '../cg/para'
+const el = ref<HTMLCanvasElement | null>(null)
 onMounted(() => {
-  const ctx = useCtx()
+  const { ctx } = initCanvas(el.value!, 1024, 1024, true)
   pParabola(-5.5, 5.5).draw(ctx, { strokeStyle: 'gray' })
   pHelical(0, 50, 1000, 5).draw(ctx, { strokeStyle: 'blue' })
   pStar(0, Math.PI * 2, 1000, 150).draw(ctx, { strokeStyle: 'orange' })
@@ -34,7 +37,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <canvas height="1024" width="1024" />
+  <canvas ref="el" />
 </template>
 
 <style scoped>

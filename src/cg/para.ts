@@ -1,23 +1,24 @@
 import { Vector2D } from './vector2d'
-export function paraDraw(points: Vector2D[], context: any, {
-  strokeStyle = 'black',
-  fillStyle = null,
-  close = false,
-} = {}) {
-  context.strokeStyle = strokeStyle
-  context.beginPath()
-  context.moveTo(...points[0])
-  for (let i = 1; i < points.length; i++)
-    context.lineTo(...points[i])
+import { drawPoints as drawPara } from './drawPoints'
+// export function drawPara(points: Vector2D[], context: any, {
+//   strokeStyle = 'black',
+//   fillStyle = null,
+//   close = false,
+// } = {}) {
+//   context.strokeStyle = strokeStyle
+//   context.beginPath()
+//   context.moveTo(...points[0])
+//   for (let i = 1; i < points.length; i++)
+//     context.lineTo(...points[i])
 
-  if (close)
-    context.closePath()
-  if (fillStyle) {
-    context.fillStyle = fillStyle
-    context.fill()
-  }
-  context.stroke()
-}
+//   if (close)
+//     context.closePath()
+//   if (fillStyle) {
+//     context.fillStyle = fillStyle
+//     context.fill()
+//   }
+//   context.stroke()
+// }
 
 export function paraMetic(xFunc: (...args: any[]) => any, yFunc: (...args: any[]) => any) {
   return function (start: number, end: number, seg = 100, ...args: any) {
@@ -30,7 +31,7 @@ export function paraMetic(xFunc: (...args: any[]) => any, yFunc: (...args: any[]
       points.push(new Vector2D(x, y))
     }
     return {
-      draw: paraDraw.bind(null, points),
+      draw: drawPara.bind(null, points),
       points,
     }
   }
