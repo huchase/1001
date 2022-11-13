@@ -1,66 +1,66 @@
 export const infos = [
   {
-    name: 'Try graph',
+    name: '几种画图表方法',
   },
   {
-    name: 'Try canvas',
+    name: '尝试 Canvas',
   },
   {
-    name: 'Try svg',
+    name: '尝试 SVG',
   },
   {
-    name: 'Try WebGL',
+    name: '尝试 WebGL',
   },
   {
-    name: 'Try rough.js',
+    name: '尝试开源库 rough.js',
   },
   {
-    name: 'Plum tree',
+    name: '梅花树',
   },
   {
-    name: 'Line fitting',
+    name: '线段拟合',
   },
   {
-    name: 'Parameter equation',
+    name: '参数方程',
   },
   {
-    name: 'Try square',
+    name: '面的画法',
   },
   {
-    name: 'Try earcut.js',
+    name: '三角剖分',
   },
   {
-    name: 'Pint & Square',
+    name: '点在面中吗?1',
   },
   {
-    name: 'Point & Square II',
+    name: '点在面中吗?2',
   },
   {
-    name: 'Fireworks',
+    name: '烟花',
   },
   {
-    name: 'Color band',
+    name: '颜色带',
   },
   {
-    name: 'Cubehelix',
+    name: 'Cubehelix 颜色系统',
   },
   {
-    name: 'Draft',
+    name: '图片转灰色',
   },
   {
-    name: 'Draft II',
+    name: '草稿1',
   },
   {
-    name: 'Draft III',
+    name: '草稿2',
   },
   {
-    name: 'Draft IV',
+    name: '草稿3',
   },
   {
-    name: 'Draft V',
+    name: '草稿4',
   },
   {
-    name: 'Draft VI',
+    name: '草稿5',
   },
 ]
 
