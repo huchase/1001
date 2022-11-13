@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import earcut from 'earcut'
-import { Vector2D } from '../math'
+import { Vector2D } from '../cg'
 onMounted(() => {
 // import {earcut} from './earcut.dev.js';
 

@@ -1,7 +1,5 @@
 <script setup lang="ts">
 import { items } from '../items'
-// const router = useRouter()
-// items.reverse()
 </script>
 
 <template>

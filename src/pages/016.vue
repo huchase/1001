@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { getImageData, loadImage, traverse } from '../math/img'
+import { getImageData, loadImage, traverse } from '../utils/img'
 
 onMounted(() => {
   const canvas = document.querySelector('canvas')
