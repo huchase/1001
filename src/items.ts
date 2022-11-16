@@ -62,6 +62,9 @@ export const infos = [
   {
     name: '草稿5',
   },
+  {
+    name: '俄罗斯方块',
+  },
 ]
 
 export const items = infos.map((info, idx) => {
